@@ -1,0 +1,48 @@
+<div class="panel panel-primary">
+    <div class="panel-heading"> 
+        {{pageTitle}}
+          </div> 
+
+      <div class="panel-body">
+        
+
+<div clas="table-responsive">
+    <table class="table" *ngIf='inventories &&  inventories.length'>
+        <thead>             
+            <tr>    
+               
+                <th>   SerialNumber </th>
+                <th>    Model</th>
+                <th>    Product</th>
+                <th>    Type</th>
+                <th>    ReleaseDate</th>
+            </tr>
+            <tr>
+                <td> <input type="text" [(ngModel)]="listFilter"></td>
+            </tr>
+            </thead> 
+            <tbody> 
+                <tr *ngFor='let inventory of inventories | invFilter:listFilter'>
+                    
+                    
+                    <td> 
+                        <a [routerLink] ="['/inventory', inventory.InventoryId]">
+                        
+                          {{inventory.InventoryName }}  
+                        </a>      
+                        </td>       
+                    <td>    {{inventory.Model|itemCodeFilter:Model}}</td>                    
+                    <td>    {{inventory.Product}}</td>
+                    <td>{{inventory.type}}</td>
+                     <td>    {{inventory.releaseDate }}</td>
+                      
+                        </tr>
+
+            </tbody>
+        </table> 
+        <button (click)="goBack()">Back</button>  
+</div>
+      </div>
+      </div>
+
+

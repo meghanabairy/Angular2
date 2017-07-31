@@ -1,0 +1,30 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+       Welcome  {{userName}}!!!
+    </div>
+    <div class="panel-body"  >
+        <div class="row" >
+            <img src="./images/inventory_management.jpg" 
+                 class="img-responsive center-block"
+                 style="max-height:300px;padding-bottom:50px"/>
+        </div>
+        
+
+ <div>
+    <nav class='navbar navnar-default'>
+         <div class='container-fluid'>
+            <a class='navbar-brand'></a>
+            <ul class=' nav navbar-nav'>
+                 <li ><a  [routerLink]="['/homePage']">Home</a></li>
+                 <li ><a  [routerLink]="['/quickSearch']">Quick Search Inventory</a></li>
+                 <li><a [routerLink]="['/inventories']">Inventory List</a></li>
+            </ul>
+         </div>    
+    </nav>
+    <div class='container1'>
+         <router-outlet></router-outlet>
+    </div>
+</div>
+
+    </div>
+</div>

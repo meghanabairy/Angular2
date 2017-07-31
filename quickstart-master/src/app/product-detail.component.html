@@ -1,0 +1,36 @@
+<div  *ngIf="inventory" class="panel panel-primary">
+    <div class="panel-heading"> 
+        Inventory Detail
+          </div> 
+
+      <div class="panel-body">
+          <table>
+              <tr>
+                  <td>
+        <b>Serial Number : </b> {{inventory.InventoryName}}</td>
+              </tr>
+              <tr>
+        <td><b>Product  : </b> {{inventory.Product}}</td>
+              </tr>
+              <tr>
+        <td><b>Model  : </b> {{inventory.Model}}</td>
+              </tr>
+              <tr>
+        <td><b>Build Date  : </b> {{inventory.releaseDate}}</td>
+              </tr>
+              <tr>
+        <td><b>Type  : </b> {{inventory.type}}</td>
+              </tr>
+              
+              <tr></tr>
+          </table>
+          </div>
+
+
+          <div class="panel-footer">
+            <a class='btn btn-default' (click) ='onBack()' style='width:80px'>
+                    <i class="glyphicon glyphicon-chevron-left"></i>Back</a>
+                     <a class='btn btn-default' (click) ='goHome()' style='width:80px'>
+                    <i class="glyphicon glyphicon-chevron-left"></i>Home</a>
+          </div>
+</div>

@@ -1,0 +1,15 @@
+
+<h1>Welcome to Inventory Info Application </h1>
+<h2>Login</h2>
+<form name="LoginForm" (ngSubmit)="login()">
+ <div>  
+ <label> UserName:</label><input type="text" [(ngModel)]="userName" name="userName" required>
+ </div>
+ <div>
+  <label> Password:</label> <input type="text" [(ngModel)]="password" name="password" required>
+ </div>
+ <div>
+  <button>Login</button>
+ </div>
+</form>
+
