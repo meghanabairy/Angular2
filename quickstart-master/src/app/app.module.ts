@@ -8,6 +8,7 @@ import{LoginComponent} from './app.login.component';
 import {HomeComponent} from './app.home.component';
 import{InvetoryModule} from './inventory.module';
 import{InventoryService} from './inventory.service';
+import{QuickSearchComponent} from './quick.search.component'
 
 @NgModule({
   imports:      [ BrowserModule,

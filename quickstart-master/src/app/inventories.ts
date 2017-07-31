@@ -4,7 +4,6 @@ export interface IInventory{
     Model:string
     Product:string
     description:string
-    releaseDate:string
-    description:string
+    releaseDate:string    
     type:string
 }
