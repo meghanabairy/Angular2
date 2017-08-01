@@ -1,10 +1,18 @@
 <div id="search-component">
-  <h4>Hero Search</h4>
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+   
   <div>
-    <div *ngFor="let hero of heroes | async"
-         (click)="gotoDetail(hero)" class="search-result" >
-      {{hero.name}}
-    </div>
+    <h1> Type in the inventory name </h1>
+    
+    <input  ngui-auto-complete
+      [(ngModel)]="selected" 
+      [source]="observableSource.bind(this)"  
+      list-formatter="formatted_address" />
+    <br/>selected Inventory: {{selected | json}}<br/><br/>
   </div>
+  <div class="panel-footer">
+            <a class='btn btn-default' (click) ='onBack()' style='width:180px'>
+                    <i class="glyphicon glyphicon-chevron-left"></i>Listing Page</a>
+                     <a class='btn btn-default' (click) ='goHome()' style='width:80px'>
+                    <i class="glyphicon glyphicon-chevron-left"></i>Home</a>
+          </div>
 </div>

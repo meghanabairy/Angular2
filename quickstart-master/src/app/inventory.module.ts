@@ -10,11 +10,13 @@ import{CommonModule} from '@angular/common';
 import{InventoryDetailComponent} from './inventory.detail.component'
 import{InventorySearchService} from './quick.search.service'
 import{QuickSearchComponent} from './quick.search.component'
+import { NguiAutoCompleteModule } from '@ngui/auto-complete'
 @NgModule({
     imports:[
      FormsModule,
       HttpModule,
      CommonModule,
+     NguiAutoCompleteModule,
        RouterModule.forChild([
              {path:'inventories', component:InventoryListComponent}, 
              {path:'quickSearch', component:QuickSearchComponent}, 
@@ -29,6 +31,7 @@ import{QuickSearchComponent} from './quick.search.component'
                 PipeItemCodeFilter,
                 InventoryDetailComponent,
                 QuickSearchComponent,
+
                 
                   ],
                   providers:[InventoryService,,InventorySearchService]
